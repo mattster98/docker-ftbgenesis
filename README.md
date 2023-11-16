@@ -1,4 +1,4 @@
-# [FTB Presents Direwolf20 1.20](https://feed-the-beast.com/modpack/119-ftb_presents_direwolf20_1_20) By FTB
+# ([FTB Genesis](https://www.feed-the-beast.com/modpacks/120-ftb-genesis?tab=about)) By FTB
 
 <!-- toc -->
 
@@ -16,9 +16,9 @@
 
 ## Description
 
-This container is primaryily built to run on an [Unraid](https://unraid.net) server, outside of that your milliage will vary.
+This container is customized to run on Kubernetes.
 
-The docker on first run will download the same version as tagged of FTB Presents Direwolf20 1.20 and install it.  This can take a while as the Forge installer can take a bit to complete.  You can watch the logs and it will eventually finish.
+The docker on first run will download the same version as tagged of FTB Genesis and install it.  This can take a while as the Forge installer can take a bit to complete.  You can watch the logs and it will eventually finish.
 
 After the first run it will simply start the server.
 
@@ -35,7 +35,7 @@ As the end user, you are repsonsible for accepting the EULA from Mojang to run t
 These environment variables can be set at run time to override their defaults.
 
 * JVM_OPTS "-Xms4096m -Xmx6144m"
-* MOTD "FTB Presents Direwolf20 1.20 Server Powered by Docker"
+* MOTD "FTB Genesis Server Powered by Docker"
 * LEVEL world
 
 ### Adding Minecraft Operators
@@ -51,12 +51,12 @@ example:
 Did you pass in the environment variable EULA set to `true`?
 
 ### Permissions of Files
-This container is designed for [Unraid](https://unraid.net) so the user in the container runs on uid 99 and gid 100.  This may cause permission errors on the /data mount on other systems.
+UID and GID set to 1000.  This may cause permission errors on the /data mount on other systems.
 
 ### Resetting
 If the install is incomplete for some reason.  Deleting the downloaded server file in /data will restart the install/upgrade process.
 
 ## Source
-Github: https://github.com/Goobaroo/docker-ftbdirewolf20_120
+Github: https://github.com/mattster98/docker-ftbgenesis
 
-Docker: https://hub.docker.com/repository/docker/goobaroo/ftbdirewolf20_120
+Docker: https://hub.docker.com/repository/docker/mattster98/docker-ftbgenesis
