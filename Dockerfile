@@ -5,7 +5,7 @@ FROM openjdk:18.0.2-jdk-buster
 LABEL version="1.6.0"
 
 RUN apt-get update && apt-get install -y curl && \
- adduser --uid 99 --gid 100 --home /data --disabled-password minecraft
+ adduser --uid 1000 --gid 1000 --home /data --disabled-password minecraft
 
 COPY launch.sh /launch.sh
 RUN chmod +x /launch.sh
